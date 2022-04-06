@@ -10,10 +10,12 @@ variables that takes in the previous cards id
 FirstCardSelected=False
 
 
+
 on click event for every card
     **checks to see if card is the first card picked or second
     if card is first card clicked/ FirstCardSelected=false:
         flip card but keep flipped
+        var previousCardFlipped = card flipped identity - grabbing the id
         FirstCardSelected=True
     elif card is second card click / FirstCardSelected=true:
         if card id matches previous card id
@@ -30,7 +32,18 @@ on click event for every card
             FirstCardSelected=false
 
 
+/// css background image- change event.Target.classlist.toggle - hidden - 
+    // check command for background image
 
+// try with tags first
+// try with background image
+
+// flip
+// 2 cards
+// grid
+// expand to multiple cards
+// randomiser
+// point system
 
 
 
