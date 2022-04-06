@@ -1,0 +1,7 @@
+grid layout 
+
+background colour blue 
+display grid
+column grid: 1fr 1fr 1fr 1fr
+set image default size - auto size
+

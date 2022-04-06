@@ -1,0 +1,10 @@
+
+
+header Memory game
+
+div container * 16 - with 8 repeats
+    img source containing card picture
+    img source containing card back picture
+div close
+
+script.js at the bottom

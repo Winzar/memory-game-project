@@ -1,0 +1,43 @@
+
+constant card query selector for all the cards 
+
+
+variable that takes in the first cards id
+variables that takes in the previous cards id 
+
+
+//display cards on startup - do later quite difficult
+FirstCardSelected=False
+
+
+on click event for every card
+    **checks to see if card is the first card picked or second
+    if card is first card clicked/ FirstCardSelected=false:
+        flip card but keep flipped
+        FirstCardSelected=True
+    elif card is second card click / FirstCardSelected=true:
+        if card id matches previous card id
+            if card id matches secondary condition of card id
+                card is kept flipped
+                point added to the tally - shows completion out of card total
+                FirstCardSelected=false
+            elif card id is exactly the same card
+                do not recognise clicks
+
+        elif card id doesn't match previous card id 
+            delay
+            card flips back
+            FirstCardSelected=false
+
+
+
+
+
+
+    
+
+
+
+    flip card
+
+    
