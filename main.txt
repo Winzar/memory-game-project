@@ -46,6 +46,8 @@ on click event for every card
 // point system
 
 
+// possibly set it so that cards are removed when they match
+
 
     
 
