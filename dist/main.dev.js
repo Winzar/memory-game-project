@@ -1,22 +1,14 @@
 "use strict";
 
-// const card = document.querySelectorAll(".flip-card") ;
 var cards = document.querySelectorAll(".card");
-var cardInner = document.querySelector(".flip-card-inner"); // console.log(card)
-
-var flippedStatus = false; //for each
-
+var flippedStatus = false;
 cards.forEach(function (card) {
   card.addEventListener('click', function (e) {
     e.currentTarget.classList.toggle('flip');
+    console.log(e.currentTarget.id);
+    console.log(e.currentTarget.classList);
   });
-}); 
-
-
-
-//Function that removes the card from display + no longer interactable
-//Current focus - click on a card and it flips
-// card.addEventListener('click', (event) => {
+}); // card.addEventListener('click', (event) => {
 //     console.log(event.currentTarget)
 //     console.log(event.currentTarget.id) //event.target.id doesn't work, only current target works
 //     //console.log(event.target.classList)

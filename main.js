@@ -1,28 +1,15 @@
-// const card = document.querySelectorAll(".flip-card") ;
 const cards = document.querySelectorAll(".card") ;
-const cardInner = document.querySelector(".flip-card-inner");
-
-
-
-
-// console.log(card)
-
 
 var flippedStatus= false
 
-//for each
-
-
 cards.forEach( card => {
     card.addEventListener('click', (e) => {
-        e.currentTarget.classList.toggle('flip'); 
+        e.currentTarget.classList.toggle('flip');
+        console.log(e.currentTarget.id);
+        console.log(e.currentTarget.classList)
     });
 });
 
-
-//Function that removes the card from display + no longer interactable
-
-//Current focus - click on a card and it flips
 
 // card.addEventListener('click', (event) => {
 //     console.log(event.currentTarget)
