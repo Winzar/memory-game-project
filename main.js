@@ -1,5 +1,5 @@
 // const card = document.querySelectorAll(".flip-card") ;
-const card = document.querySelector(".card-number-1") ;
+const cards = document.querySelectorAll(".card") ;
 const cardInner = document.querySelector(".flip-card-inner");
 
 
@@ -12,22 +12,37 @@ var flippedStatus= false
 
 //for each
 
-//Function that removes the card from display + no longer interactable
-card.addEventListener('click', (event) => {
-    console.log(event.currentTarget)
-    //card.style.visibility = "hidden";
-    if (flippedStatus == false) {
-        cardInner.classList.toggle("card-number-1--flipped")
-        //cardInner.style.cssText = "transform: rotateY(180deg)";
-        console.log("flippedStatus has been recognised as true");
-        flippedStatus= true;
-    } else if (flippedStatus == true) {
-        //cardInner.style.transform= null; 
-        cardInner.classList.toggle("card-number-1--flipped");
-        console.log("flippedStatus has been recognised as false");
-        flippedStatus= false;
-    } 
+
+cards.forEach( card => {
+    card.addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('flip'); 
+    });
 });
+
+
+//Function that removes the card from display + no longer interactable
+
+//Current focus - click on a card and it flips
+
+// card.addEventListener('click', (event) => {
+//     console.log(event.currentTarget)
+//     console.log(event.currentTarget.id) //event.target.id doesn't work, only current target works
+//     //console.log(event.target.classList)
+//     // console.log(event.target.innerHTML)
+//     //card.style.visibility = "hidden";
+//     if (flippedStatus == false) {
+//         cardInner.classList.toggle("card-number-1--flipped")
+//         //cardInner.style.cssText = "transform: rotateY(180deg)";
+//         console.log("flippedStatus has been recognised as true");
+//         flippedStatus= true;
+//     } else if (flippedStatus == true) {
+//         //cardInner.style.transform= null; 
+//         cardInner.classList.toggle("card-number-1--flipped");
+//         console.log("flippedStatus has been recognised as false");
+//         flippedStatus= false;
+//     } 
+// });
+
 
 // var firstCard = true
 
