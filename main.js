@@ -23,11 +23,43 @@ card.addEventListener('click', (event) => {
         flippedStatus= true;
     } else if (flippedStatus == true) {
         //cardInner.style.transform= null; 
-        card.classList.toggle("card-number-1--flipped");
+        cardInner.classList.toggle("card-number-1--flipped");
         console.log("flippedStatus has been recognised as false");
         flippedStatus= false;
     } 
 });
+
+// var firstCard = true
+
+
+// card.forEach(element => {
+//     element.addEventListener('click', () => {
+//     var currentCardId = get current card id
+//     // need to have some form of match indicator here?
+//         if (firstCard==true) {
+//             cardInner.classList.toggle("card-number---flipped")
+//             var firstCardId = get element id
+//             // https://stackoverflow.com/questions/4825295/onclick-to-get-the-id-of-the-clicked-button
+//             firstCard==false 
+//         }
+//         else if (firstCard==false) {
+//             if (currentCardId==firstCardId) {
+//                 cardInner.classList.toggle("card-number---flipped")
+//                 setTimeout(1000)
+//                 //.style.visibility = "hidden";
+//                 firstCard==true
+//             }
+//             else if (currentCardId==firstCardId)
+//                 cardInner.classList.toggle
+//                 setTimeout(1000)    
+//                 cardInner.classList.toggle
+//                 console.log("same card clicked")
+//                 firstCard==true
+//         }
+
+    
+//     })
+// })
 
 
 

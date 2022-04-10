@@ -1,7 +1,13 @@
 .flip-card {
     background-color: transparent;
-    width: 300px;   // size of the flip box/container
-    height: 300px; // size of the flip box/container
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 200px;
+    height:100px;
+    flex-wrap: wrap;
+    // width: 10px;   // size of the flip box/container
+    // height: 10px; // size of the flip box/container
     perspective: 1000px; // how much the card flips into the screen/extends into the screen
   }
   
@@ -15,23 +21,31 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //standard box shadow
   }
   
-  .card-number-1 {
-    position: relative; //standard positioning, doesn't really change anything about the way it functions
-    width: 100%; // size of the inner container of the flip box
-    height: 100%; // size of the inner container of the flip box
-    text-align: center; // aligns the image or content to the centre - seems to also affect images smaller than the container
-    transition: transform 0.5s; //controls the flip time
-    transform-style: preserve-3d; // if removed just inverts the image and doesn't display other image
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //standard box shadow
-  }
+  // .card-number-1 {
+  //   position: relative; //standard positioning, doesn't really change anything about the way it functions
+  //   width: 100%; // size of the inner container of the flip box
+  //   height: 100%; // size of the inner container of the flip box
+  //   text-align: center; // aligns the image or content to the centre - seems to also affect images smaller than the container
+  //   transition: transform 0.5s; //controls the flip time
+  //   transform-style: preserve-3d; // if removed just inverts the image and doesn't display other image
+  //   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //standard box shadow
+  // }
 
   .card-number-1--flipped{
     transform: rotateY(180deg)
   } 
 
+  // .card-number-2 {
+  //   position: relative; //standard positioning, doesn't really change anything about the way it functions
+  //   width: 100%; // size of the inner container of the flip box
+  //   height: 100%; // size of the inner container of the flip box
+  //   text-align: center; // aligns the image or content to the centre - seems to also affect images smaller than the container
+  //   transition: transform 0.5s; //controls the flip time
+  //   transform-style: preserve-3d; // if removed just inverts the image and doesn't display other image
+  //   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //standard box shadow
+  // }
 
-
-  .card-number-2 {
+  .card{
     position: relative; //standard positioning, doesn't really change anything about the way it functions
     width: 100%; // size of the inner container of the flip box
     height: 100%; // size of the inner container of the flip box
@@ -40,6 +54,7 @@
     transform-style: preserve-3d; // if removed just inverts the image and doesn't display other image
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //standard box shadow
   }
+
 
 
   // .flip-card-inner { //takes a state and then proceeds to interact with inner container of the flip-card
