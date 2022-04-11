@@ -69,6 +69,19 @@ cards.forEach(function (card) {
         //console.log("currentCardId!=firstCardId");
         console.log("not the right card");
         firstCard = false;
+        setTimeout(function () {
+          cards.forEach(function (element) {
+            console.log(element.className);
+
+            if (element.classList == firstCardClass || element.classList == currentCardClass) {
+              console.log("eureka");
+              element.classList.toggle('flip');
+            } // else {
+            //     console.log("ignored");
+            // }
+
+          });
+        }, 1000);
       }
     }
   });
