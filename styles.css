@@ -27,6 +27,10 @@ body {
   transform: rotateY(180deg);
 }
 
+.card-paired {
+  display: none;
+}
+
 .card-front, .card-back {
   position: absolute;
   width: 100%;

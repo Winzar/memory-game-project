@@ -35,6 +35,9 @@ body{
 .card.flip {
   transform: rotateY(180deg);
 }
+.card-paired {
+  display: none;
+}
 
 
 .card-front, .card-back {

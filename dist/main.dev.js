@@ -1,12 +1,76 @@
 "use strict";
 
 var cards = document.querySelectorAll(".card");
-var flippedStatus = false;
+var flippedStatus = false; // cards.forEach( card => {
+//     card.addEventListener('click', (e) => {
+//         e.currentTarget.classList.toggle('flip');
+//         console.log(e.currentTarget.id);
+//         console.log(e.currentTarget.classList)
+//     });
+// });
+
+console.log(cards);
+console.log(cards[0]);
+console.log(cards[1]);
+var firstCard = true;
+var firstCardId = "";
+var firstCardClass = "";
+var currentCardId = "";
+var currentCardClass = "";
 cards.forEach(function (card) {
   card.addEventListener('click', function (e) {
     e.currentTarget.classList.toggle('flip');
-    console.log(e.currentTarget.id);
-    console.log(e.currentTarget.classList);
+    currentCardId = e.currentTarget.id;
+    currentCardClass = e.currentTarget.classList;
+    console.log("firstcard = " + firstCard);
+
+    if (firstCard == true) {
+      // flip
+      firstCardId = e.currentTarget.id;
+      console.log(firstCardId);
+      firstCardClass = e.currentTarget.classList;
+      console.log(firstCardClass);
+      console.log("e.currentTarget= " + e.target);
+      firstCard = false;
+      console.log("firstcard = " + firstCard);
+    } else if (firstCard == false) {
+      // console.log(currentCardId);
+      // console.log(firstCardId);
+      // console.log(firstCardClass);
+      if (currentCardId == firstCardId) {
+        console.log("currentCardId==firstCardId"); //flip
+
+        if (currentCardClass == firstCardClass) {
+          console.log("same card");
+        } else if (currentCardClass != firstCardClass) {
+          console.log("we have a pair");
+          setTimeout(function () {
+            cards.forEach(function (element) {
+              console.log(element.id);
+
+              if (element.id == firstCardId) {
+                console.log("eureka");
+                element.classList.toggle('card-paired');
+              } // else {
+              //     console.log("ignored");
+              // }
+
+            });
+          }, 1000); // for each card in the nodelist of cards {
+          //     check whether the id is a match for the current id
+          //         if match classList.toggle('card-paired')
+          //         else
+          // }
+          //e.currentTarget.classList.toggle('card-paired');
+
+          firstCard = true;
+        }
+      } else if (currentCardId !== firstCardId) {
+        //console.log("currentCardId!=firstCardId");
+        console.log("not the right card");
+        firstCard = false;
+      }
+    }
   });
 }); // card.addEventListener('click', (event) => {
 //     console.log(event.currentTarget)
