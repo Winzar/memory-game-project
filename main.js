@@ -20,6 +20,10 @@ let firstCardClass = ""
 let currentCardId = ""
 let currentCardClass =""
 
+// to do list - make it so that the user can't spam click
+
+
+
 cards.forEach( card => {
     card.addEventListener('click', (e) => {
         e.currentTarget.classList.toggle('flip');
@@ -46,6 +50,12 @@ cards.forEach( card => {
                 //flip
                     if (currentCardClass== firstCardClass) {
                         console.log("same card");
+                        setTimeout(() => {
+                            firstCardId = "" ;
+                            firstCardClass = "";
+                            currentCardId = "";
+                            currentCardClass ="";
+                        },1200);
                     }
                     else if (currentCardClass!= firstCardClass) {
                         console.log("we have a pair");
@@ -67,6 +77,13 @@ cards.forEach( card => {
                         //         else
                         // }
 
+                        setTimeout(() => {
+                            firstCardId = "" ;
+                            firstCardClass = "";
+                            currentCardId = "";
+                            currentCardClass ="";
+                        },1200);
+
                         //e.currentTarget.classList.toggle('card-paired');
                         firstCard=true;
                     }
@@ -74,7 +91,7 @@ cards.forEach( card => {
             else if (currentCardId!==firstCardId) {
                 //console.log("currentCardId!=firstCardId");
                 console.log("not the right card");
-                firstCard=false;
+                firstCard=true;
                 setTimeout(() => {
                     cards.forEach(element => {
                         console.log(element.className);
@@ -87,13 +104,23 @@ cards.forEach( card => {
                         // }
                      });
                     },1000);
+                setTimeout(() => {
+                    firstCardId = "" ;
+                    firstCardClass = "";
+                    currentCardId = "";
+                    currentCardClass ="";
+                },1200);
+                    
             }
         }
 
     });
 });
 
-
+// firstCardId = ""
+// firstCardClass = ""
+// currentCardId = ""
+// currentCardClass =""
 
 
 

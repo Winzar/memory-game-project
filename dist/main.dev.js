@@ -16,7 +16,8 @@ var firstCard = true;
 var firstCardId = "";
 var firstCardClass = "";
 var currentCardId = "";
-var currentCardClass = "";
+var currentCardClass = ""; // to do list - make it so that the user can't spam click
+
 cards.forEach(function (card) {
   card.addEventListener('click', function (e) {
     e.currentTarget.classList.toggle('flip');
@@ -42,6 +43,12 @@ cards.forEach(function (card) {
 
         if (currentCardClass == firstCardClass) {
           console.log("same card");
+          setTimeout(function () {
+            firstCardId = "";
+            firstCardClass = "";
+            currentCardId = "";
+            currentCardClass = "";
+          }, 1200);
         } else if (currentCardClass != firstCardClass) {
           console.log("we have a pair");
           setTimeout(function () {
@@ -61,14 +68,20 @@ cards.forEach(function (card) {
           //         if match classList.toggle('card-paired')
           //         else
           // }
-          //e.currentTarget.classList.toggle('card-paired');
+
+          setTimeout(function () {
+            firstCardId = "";
+            firstCardClass = "";
+            currentCardId = "";
+            currentCardClass = "";
+          }, 1200); //e.currentTarget.classList.toggle('card-paired');
 
           firstCard = true;
         }
       } else if (currentCardId !== firstCardId) {
         //console.log("currentCardId!=firstCardId");
         console.log("not the right card");
-        firstCard = false;
+        firstCard = true;
         setTimeout(function () {
           cards.forEach(function (element) {
             console.log(element.className);
@@ -82,10 +95,20 @@ cards.forEach(function (card) {
 
           });
         }, 1000);
+        setTimeout(function () {
+          firstCardId = "";
+          firstCardClass = "";
+          currentCardId = "";
+          currentCardClass = "";
+        }, 1200);
       }
     }
   });
-}); // card.addEventListener('click', (event) => {
+}); // firstCardId = ""
+// firstCardClass = ""
+// currentCardId = ""
+// currentCardClass =""
+// card.addEventListener('click', (event) => {
 //     console.log(event.currentTarget)
 //     console.log(event.currentTarget.id) //event.target.id doesn't work, only current target works
 //     //console.log(event.target.classList)
