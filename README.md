@@ -5,7 +5,7 @@
 - [About](#about)
 - [Code Explanation](#code-Explanation)
 - [Errors](#errors)
-- [Pending]
+- [Pending](#pending)
 
 ## About
 
@@ -33,3 +33,14 @@ Order of operations:
 ## Errors
 
 The game begins to break if all the cards are selected rapidly - before the timeout function is finished.
+
+## Pending
+
+To-do list:
+
+- Finish screen
+- Random positioning for cards
+- Reset button to repopulate board
+- Break down into functions, break down scss into separate files
+- Level system
+- Theme + audio?
