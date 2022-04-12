@@ -5,6 +5,7 @@
 - [About](#about)
 - [Code Explanation](#code-Explanation)
 - [Errors](#errors)
+- [Pending]
 
 ## About
 
