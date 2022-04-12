@@ -1,14 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@500&display=swap");
 body {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
+  background-color: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: "Nunito Sans", Helvetica, sans-serif;
+}
+
+button {
+  display: block;
   margin: auto;
+  min-width: 80px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #2980b9;
+  border-radius: 15px;
+  border: 2px solid;
 }
 
 .cards {
-  width: 200px;
-  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 200px;
+  width: auto;
+  height: auto;
   margin: auto;
   perspective: 1000px;
 }
@@ -51,6 +68,18 @@ body {
 }
 
 .container__image {
-  height: 100px;
+  height: 120px;
   width: 100px;
+}
+
+@media only screen and (max-width: 660px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 140px;
+  }
+
+  .container__image {
+    height: 100px;
+    width: 80px;
+  }
 }

@@ -1,4 +1,6 @@
+const button = document.querySelector(".reveal-button")
 const cards = document.querySelectorAll(".card") ;
+
 
 var flippedStatus= false
 
@@ -10,9 +12,12 @@ var flippedStatus= false
 //     });
 // });
 
-console.log(cards)
-console.log(cards[0])
-console.log(cards[1])
+// console.log(cards)
+// console.log(cards[0])
+// console.log(cards[1])
+
+
+
 
 let firstCard = true
 let firstCardId = ""
@@ -20,9 +25,17 @@ let firstCardClass = ""
 let currentCardId = ""
 let currentCardClass =""
 
-// to do list - make it so that the user can't spam click
+// to do list - make it so that the user can't spam click and break the game
+// Add more cards
 
 
+button.addEventListener('click', () => {
+    console.log("I am working")
+    cards.forEach(element => {
+        console.log(element);
+        element.classList.toggle('flip');
+        })
+})
 
 cards.forEach( card => {
     card.addEventListener('click', (e) => {
@@ -50,12 +63,12 @@ cards.forEach( card => {
                 //flip
                     if (currentCardClass== firstCardClass) {
                         console.log("same card");
-                        setTimeout(() => {
-                            firstCardId = "" ;
-                            firstCardClass = "";
-                            currentCardId = "";
-                            currentCardClass ="";
-                        },1200);
+                        // setTimeout(() => {
+                        //     firstCardId = "" ;
+                        //     firstCardClass = "";
+                        //     currentCardId = "";
+                        //     currentCardClass ="";
+                        // },1200);
                     }
                     else if (currentCardClass!= firstCardClass) {
                         console.log("we have a pair");
@@ -63,7 +76,6 @@ cards.forEach( card => {
                         cards.forEach(element => {
                             console.log(element.id);
                             if (element.id==firstCardId) {
-                                console.log("eureka")
                                 element.classList.toggle('card-paired');
                             }
                             // else {
